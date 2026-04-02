@@ -6,12 +6,11 @@ library(wru)
 handlers(global = TRUE)
 handlers("cli")
 
-setwd("~/Downloads")
+setwd("X") # change this to set the workign directory to where this file is located
 
-#load datasets
-drafted_stats        <- read_csv("drafted_stats.csv")
-player_master        <- read_csv("player_master.csv")
-college_performance  <- read_csv("college_performance_history.csv")
+drafted_stats        <- read_csv("../1.Data_Collection_Prep/clean_final_datasets/drafted_stats.csv")
+player_master        <- read_csv("../1.Data_Collection_Prep/clean_final_datasets/player_master.csv")
+college_performance  <- read_csv("../1.Data_Collection_Prep/clean_final_datasets/college_performance_history.csv")
 
 #safe max helper to avoid -Inf on all-NA columns
 safe_max <- function(x) {
@@ -275,8 +274,7 @@ cat("missing prob_black after join:", sum(is.na(master$prob_black)), "\n")
 
 
 #save master dataset
-write_csv(master, "master.csv")
-cat("\nmaster.csv saved to ~/Downloads\n")
+write_csv(master, "../1.Data_Collection_Prep/clean_final_datasets/master_edited")
 
 
 

@@ -9,11 +9,11 @@ library(logistf)
 handlers(global = TRUE)
 handlers("cli")
 
-setwd("~/Downloads")
+setwd("X") # change this to set the workign directory to where this file is located
 
 # load datasets
-player_master       <- read_csv("player_master.csv", show_col_types = FALSE)
-college_performance <- read_csv("college_performance_history.csv", show_col_types = FALSE)
+player_master       <- read_csv("master_edited", show_col_types = FALSE)
+college_performance  <- read_csv("../1.Data_Collection_Prep/clean_final_datasets/college_performance_history.csv", show_col_types = FALSE)
 combine_data        <- load_combine(seasons = 2018:2025)
 nfl_players         <- load_players()
 
