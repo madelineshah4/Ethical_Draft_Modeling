@@ -16,6 +16,7 @@ Folder #2 contains the historical analysis of discrimination in the NFL draft. T
 Folder #3 contains the proof-of-concept experimental framework to test progressively riskier features in NFL recommendation models.
 
 # R and Python Packages
+
 This project invovles the use of many libraries. 
 
 For R:
